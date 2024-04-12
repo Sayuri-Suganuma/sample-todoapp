@@ -1,0 +1,17 @@
+<h1>{{ title }}</h1>
+
+  <input  id="message" 
+          name="message" 
+          #messageInput 
+          placeholder="入力欄"/>
+
+  <button type="button" 
+          class="post-button" 
+          (click)="getMessageContent(messageInput.value)">
+          追加
+  </button>
+
+
+<div *ngFor="let message of messages">
+  <p>{{ message.message }}</p>
+</div>
